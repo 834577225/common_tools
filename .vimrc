@@ -6,7 +6,9 @@ execute pathogen#infect()
 syntax on
 filetype plugin indent on
 " NERDTree config
-map <C-n> :NERDTree<CR>
+" map <C-n> :NERDTree<CR>
+map <F4> :NERDTreeToggle<CR>
+autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTreeType") &&b:NERDTreeType == "primary") | q | endif
 " MiniBufExplorer config
 let g:miniBufExplMaxSize = 2
 " taglist config
